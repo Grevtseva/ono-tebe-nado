@@ -14,10 +14,14 @@ header {
 }
 
 .header__menu-items {
-  /*  list-style-type: none;
-    padding-left: 0; */
     list-style: circle;
-    justify-content: space-between;
+    width: fit-content;
+    margin-left: 32px;
+    justify-content:center;
+}
+
+.header__menu-items_first {
+    list-style: none;
 }
 
 .header__menu-items_active {
@@ -46,16 +50,18 @@ header {
     text-decoration: none;
 }
 
-.header__address {
-
-}
-
 .cover {
-    background-image: url(../images/cover.jpg);
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ), 
+      url(../images/cover.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1440px 757px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    height: 757px;
+
 
 }
 
@@ -84,6 +90,12 @@ span.cover__title--letter-spacing {
     display: block;
 }
 
+.cover__description {
+    display: flex;
+    justify-content:space-around;
+    align-items : center;
+}
+
 .cover__subtitle {
     font-family:'Raleway', sans-serif;
     text-align: center;
@@ -92,11 +104,11 @@ span.cover__title--letter-spacing {
     color: #FFF;
     line-height: 28px;
     font-weight: 400;
-    padding-bottom: 62px;
+    vertical-align: bottom;
     word-spacing: 15px;
 }
 
-button {
+.bet-button {
     font-family:'Raleway', sans-serif;
     text-transform: uppercase;
     font-size: 22px;
@@ -104,11 +116,21 @@ button {
     line-height: 25.83px;
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
-    margin: 50px;
+    margin: 50px 50px;
+    background-color: transparent;
+    padding: 12px 32px;
+    width: 257px;
 }
 
+.cover__subtitle__left {
+    margin: 50px 50px;
+    padding: 12px 32px;
+    width: 257px;
+}
+
+
 .lots {
-padding: 180px 50px;
+    padding: 180px 50px;
 }
 
 .lots__title {
@@ -118,11 +140,15 @@ padding: 180px 50px;
     font-size: 40px;
     line-height: 46.96px;
     color:#000000;
+    padding-bottom: 27px;
+    padding-left: 40px;
 }
 
 .lots__card__list {
-    grid-template-columns: repeat(auto-fill, minmax(430px, 450px));
-    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 25px;
     justify-content: space-between;
 }
 
@@ -130,24 +156,42 @@ padding: 180px 50px;
     padding: 50px 40px;
     width: 430px;
     height: 450px;
+    display: grid;
+    
 }
 
 .lots__card__first {
-    background-image: url(../images/card-lot-01.jpg);
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ),  url(../images/card-lot-01.jpg);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .lots__card__second {
-    background-image: url(../images/card-lot-02.jpg);
+    background-image:      linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ),  url(../images/card-lot-02.jpg);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .lots__card__third {
-    background-image: url(../images/card-lot-03.jpg);
+    background-image:       linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ), url(../images/card-lot-03.jpg);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card__title {
+    align-items: center;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 22px;
@@ -156,22 +200,47 @@ padding: 180px 50px;
 }
 
 .card__text {
+    vertical-align: bottom;
     font-family: Raleway;
     font-size: 20px;
     font-weight: 400;
     line-height: 120%;
     font-style: normal;
     color: #FFF;
+    align-self: end;
+}
+
+.lots__link {
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #000;
+    padding-top: 30px;
+    padding-left: 40px;
 }
 
 .about {
-    padding: opx 50px 180px 50px;
+    padding: 0px 50px 180px 50px;
+    display: flex;
 }
 
-.about__logo {
-    width: 148px;
+.about__logo__background {
+    width: 240px;
+    height: 240px;
     background-color: #000000;
-    border-radius: ellipse;
+    border-radius: 100%;
+    display: flex;
+    justify-content:center;
+    align-items : center;  
+    margin: 0px 95px;  
+}
+
+.about__logo__image {
+    width: 148px;
+    height: 114px;
+
 }
 
 .about__title {
@@ -181,11 +250,11 @@ padding: 180px 50px;
     font-size: 40px;
     line-height: 46.96px;
     color:#000000;
-    padding-bottom: 100px;
+    padding-bottom: 75px;
 }
 
 .about__text {
-
+padding-top: 25px;
 }
 
 footer {
@@ -195,7 +264,7 @@ footer {
 }
 
 .footer__menu {
-position: center;
+justify-content:center;
 }
 
 .footer__menu-items {
