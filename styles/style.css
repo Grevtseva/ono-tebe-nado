@@ -6,7 +6,11 @@ header {
 
 .header__menu {
     display: flex;
-    list-style: circle;
+    font-family:'Raleway', sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 18px;
+    color: #000;
 }
 
 .header__menu-items {
@@ -25,11 +29,17 @@ header {
 }
 
 .header__links-list {
-
+    font-family:'Raleway', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24.3px;
+    color: #000;
 }
 
 .header__links-list-item {
-
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .header__links-list-items_active {
@@ -45,9 +55,11 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1440px 757px;
+    background-color: rgba(0, 0, 0, 0.5);
+
 }
 
-.title {
+.cover__title {
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     letter-spacing: 30px;
@@ -55,6 +67,11 @@ header {
     font-size: 100px;
     color:#FFFFFF;
     line-height: 115px;
+    padding: 165px 50px 0;
+}
+
+span.cover__title--letter-spacing {
+    letter-spacing: 60px;
 }
 
 .text-center {
@@ -65,6 +82,18 @@ header {
 .text-right {
     text-align: right;
     display: block;
+}
+
+.cover__subtitle {
+    font-family:'Raleway', sans-serif;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #FFF;
+    line-height: 28px;
+    font-weight: 400;
+    padding-bottom: 62px;
+    word-spacing: 15px;
 }
 
 button {
@@ -92,7 +121,9 @@ padding: 180px 50px;
 }
 
 .lots__card__list {
-    grid-template-columns: repeat(auto-fill, minmax(310px, 310px));
+    grid-template-columns: repeat(auto-fill, minmax(430px, 450px));
+    position: relative;
+    justify-content: space-between;
 }
 
 .lots__card {
@@ -103,14 +134,17 @@ padding: 180px 50px;
 
 .lots__card__first {
     background-image: url(../images/card-lot-01.jpg);
+    background-size: contain;
 }
 
 .lots__card__second {
     background-image: url(../images/card-lot-02.jpg);
+    background-size: contain;
 }
 
 .lots__card__third {
     background-image: url(../images/card-lot-03.jpg);
+    background-size: contain;
 }
 
 .card__title {
