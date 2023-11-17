@@ -2,6 +2,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 92px 50px;
+    align-items : center;
 }
 
 .header__menu {
@@ -61,7 +62,7 @@ header {
     background-position: center;
     background-size: cover;
     height: 757px;
-
+    display: grid;
 
 }
 
@@ -94,6 +95,7 @@ span.cover__title--letter-spacing {
     display: flex;
     justify-content:space-around;
     align-items : center;
+    align-self: end;
 }
 
 .cover__subtitle {
