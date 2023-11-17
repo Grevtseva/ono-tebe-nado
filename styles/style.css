@@ -1,1 +1,83 @@
 /* место для вашего кода */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 92px 50px;
+}
+
+.header__menu {
+    justify-content: space-between;
+    list-style: circle;
+}
+
+.header__menu-items_active {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.header__logo {
+    width: 148px;
+    height: 105px;
+}
+
+.cover {
+    background-image: url(../images/cover.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1440px 757px;
+}
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 100px;
+    color:#FFFFFF;
+    line-height: 115px;
+}
+
+.text-center {
+    text-align: center;
+    display: block;
+}
+
+.text-right {
+    text-align: right;
+    display: block;
+}
+
+.lots__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 46.96px;
+    color:#000000;
+}
+
+.lots__card {
+    padding: 50px 40px;
+    width: 430px;
+    height: 450px;
+    flex-grow: 1
+}
+
+.lots__card__first {
+    background-image: url(../images/card-lot-01.jpg);
+}
+
+.lots__card__second {
+    background-image: url(../images/card-lot-02.jpg);
+}
+
+.lots__card__third {
+    background-image: url(../images/card-lot-03.jpg);
+}
+
+.card__title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26.4px;
+}
