@@ -128,7 +128,7 @@ span.cover__title--letter-spacing {
     line-height: 28px;
     font-weight: 400;
     vertical-align: bottom;
-    word-spacing: 15px;
+    word-spacing: 17px;
 }
 
 .bet-button {
@@ -139,15 +139,15 @@ span.cover__title--letter-spacing {
     line-height: 25.83px;
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
-    margin: 50px 50px;
+    margin: 50px 0px;
     background-color: transparent;
     padding: 12px 32px;
     width: 257px;
 }
 
 .cover__subtitle__left {
-    margin: 50px 50px;
-    padding: 12px 32px;
+    margin: 50px 20px;
+    padding: 12px 30px;
     width: 257px;
 }
 
@@ -279,6 +279,7 @@ span.cover__title--letter-spacing {
     line-height: 46.96px;
     color:#000000;
     padding-bottom: 75px;
+    padding-top: 105px;
 }
 
 .about__text {
@@ -288,7 +289,7 @@ span.cover__title--letter-spacing {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 23.48px;
 }
 
 footer {
@@ -326,6 +327,21 @@ line-height: normal;
 
 .footer__socials {
     display: flex;
-    width: 240px;
+}
+
+.footer__socials__vkontakte {
+    margin-left: 48px;
     height: 48px;
+    width: 48px;
+}
+
+.footer__socials__pinterest {
+    height: 48px;
+    width: 48px;
+    margin-left: 48px;
+}
+
+.footer__socials__youtube {
+    height: 48px;
+    width: 48px;
 }
