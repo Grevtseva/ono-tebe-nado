@@ -20,7 +20,7 @@ header {
     width: fit-content;
     margin-right: 32px;
     justify-content:center;
-    padding-left: 0; 
+    padding-left: 0;
 }
 
 .header__menu-items_first {
@@ -261,8 +261,8 @@ span.cover__title--letter-spacing {
     border-radius: 100%;
     display: flex;
     justify-content:center;
-    align-items : center;  
-    margin: 0px 120px 0px 95px;   
+    align-items : center;
+    margin: 0px 120px 0px 95px;
 }
 
 .about__logo__image {
@@ -310,7 +310,7 @@ line-height: normal;
 
 .footer__menu-items {
     list-style-type: none;
-    padding-left: 0; 
+    padding-left: 0;
     text-align: center;
 }
 
