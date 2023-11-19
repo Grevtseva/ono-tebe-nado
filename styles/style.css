@@ -81,7 +81,7 @@ a.header__menu-items {
     font-size: 100px;
     color:#FFFFFF;
     line-height: 115px;
-    padding: 165px 50px 40px;
+    padding: 165px 50px 75px;
 }
 
 span.cover__title__letter-spacing {
@@ -120,7 +120,7 @@ span.cover__title__letter-spacing {
     line-height: 28px;
     font-weight: 400;
     vertical-align: bottom;
-    word-spacing: 17px;
+    word-spacing: 18px;
 }
 
 .bet-button {
@@ -168,7 +168,7 @@ span.cover__title__letter-spacing {
     display: grid;
     background-repeat: no-repeat;
     background-size: cover;
-    flex-grow: 1;  
+    flex-grow: 1;
 }
 
 .card_type_film {
@@ -308,7 +308,7 @@ a.footer__menu-items {
 
 .footer__socials {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
 .footer__socials__image--first {
