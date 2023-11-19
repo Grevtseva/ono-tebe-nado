@@ -1,6 +1,6 @@
-header {
-    display: flex;
-    justify-content: space-between;
+.header {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
     padding: 92px 50px;
     align-items : center;
 }
@@ -12,10 +12,9 @@ header {
     line-height: normal;
     font-size: 18px;
     color: #000;
-
 }
 
-.header__menu-items {
+li.header__menu-items {
     list-style: circle;
     width: fit-content;
     margin-right: 32px;
@@ -23,27 +22,25 @@ header {
     padding-left: 0;
 }
 
-.header__menu-items_first {
+li.header__menu-items__first {
     list-style: none;
 }
 
-.header__menu-items_active {
+a.header__menu-items {
     text-decoration: none;
-}
-
-.header__menu-items_inactive {
-    text-decoration: none;
-    border-bottom: 1px solid black;
-    padding-bottom: 1px;
 }
 
 .header__logo {
+    display: block;
     width: 135px;
-    margin-right: 175px;
     flex-shrink: 0;
 }
 
-.header__links-list {
+.header__address {
+    justify-self: end;
+}
+
+.info__links-list {
     font-family:'Raleway', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -52,19 +49,15 @@ header {
     color: #000;
 }
 
-.header__links-list-item {
+.info__links-list-item {
     list-style-type: none;
     padding-left: 0;
-}
-
-.header__links-list-items_active {
     text-decoration: none;
 }
 
-.header__links-list-items_inactive {
+.info__links-list-items_inactive {
     border-bottom: 1px solid black;
     padding-bottom: 1px;
-    text-decoration: none;
 }
 
 .cover {
@@ -77,9 +70,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 757px;
     display: grid;
-
 }
 
 .cover__title {
@@ -90,14 +81,14 @@ header {
     font-size: 100px;
     color:#FFFFFF;
     line-height: 115px;
-    padding: 165px 50px 0;
+    padding: 165px 50px 40px;
 }
 
-span.cover__title--letter-spacing {
+span.cover__title__letter-spacing {
     letter-spacing: 60px;
 }
 
-.cover__title--letter-spacing--none {
+.cover__title__letter-spacing-none {
     letter-spacing: 0px;
 }
 
@@ -114,9 +105,10 @@ span.cover__title--letter-spacing {
 
 .cover__description {
     display: flex;
-    justify-content:space-around;
+    justify-content:flex-end;
     align-items : center;
-    align-self: end;
+    gap:78px;
+    margin-right: 50px;
 }
 
 .cover__subtitle {
@@ -145,13 +137,6 @@ span.cover__title--letter-spacing {
     width: 257px;
 }
 
-.cover__subtitle__left {
-    margin: 50px 20px;
-    padding: 12px 30px;
-    width: 257px;
-}
-
-
 .lots {
     padding: 180px 50px;
 }
@@ -167,47 +152,44 @@ span.cover__title--letter-spacing {
     padding-left: 40px;
 }
 
-.lots__card__list {
-    display: flex;
+.lots__card-list {
+    display: grid;
     flex-wrap: nowrap;
     align-items: center;
     gap: 25px;
-    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    list-style-type: none;
 }
 
-.lots__card {
+.card {
     padding: 50px 40px;
-    width: 475px;
-    height: 450px;
+    width: 430px;
+    min-height: 450px;
     display: grid;
-    
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;  
 }
 
-.lots__card__first {
+.card_type_film {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.6), 
         rgba(0, 0, 0, 0.6)
       ),  url(../images/card-lot-01.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.lots__card__second {
-    background-image:      linear-gradient(
+.card_type_book {
+    background-image: linear-gradient(
         rgba(0, 0, 0, 0.6), 
         rgba(0, 0, 0, 0.6)
       ),  url(../images/card-lot-02.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.lots__card__third {
-    background-image:       linear-gradient(
+.card_type_picture {
+    background-image: linear-gradient(
         rgba(0, 0, 0, 0.6), 
         rgba(0, 0, 0, 0.6)
       ), url(../images/card-lot-03.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .card__title {
@@ -223,7 +205,7 @@ span.cover__title--letter-spacing {
 
 .card__text {
     vertical-align: bottom;
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-weight: 400;
     line-height: 120%;
@@ -234,7 +216,7 @@ span.cover__title--letter-spacing {
 }
 
 .lots__link {
-    font-family: Raleway;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -244,11 +226,12 @@ span.cover__title--letter-spacing {
     padding-left: 40px;
 }
 
-.lots__link__underline {
+.lots__link-underline {
     text-decoration: none;
     border-bottom: 1px solid black;
     padding-bottom: 1px;
 }
+
 .about {
     padding: 0px 50px 180px 50px;
     display: flex;
@@ -268,7 +251,6 @@ span.cover__title--letter-spacing {
 .about__logo__image {
     width: 148px;
     height: 114px;
-
 }
 
 .about__title {
@@ -292,56 +274,50 @@ span.cover__title--letter-spacing {
     line-height: 23.48px;
 }
 
-footer {
+.footer {
     display: flex;
     justify-content: space-between;
     padding: 0px 50px 90px 50px
 }
 
 .footer__menu {
-justify-content:center;
-color: #000;
-text-align: center;
-font-family: Raleway;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    justify-content:center;
+    color: #000;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.footer__menu-items {
+li.footer__menu-items {
     list-style-type: none;
     padding-left: 0;
     text-align: center;
 }
 
-.footer__menu-items_active {
+a.footer__menu-items {
     text-decoration: none;
 }
 
-.footer__menu-items_inactive {
-    text-decoration: none;
+.menu-items__inactive {
     border-bottom: 1px solid black;
     padding-bottom: 1px;
 }
 
 .footer__socials {
     display: flex;
+    justify-content: space-between;    
 }
 
-.footer__socials__vkontakte {
-    margin-left: 48px;
+.footer__socials__image--first {
     height: 48px;
     width: 48px;
 }
 
-.footer__socials__pinterest {
-    height: 48px;
-    width: 48px;
+.footer__socials__image--rest {
     margin-left: 48px;
-}
-
-.footer__socials__youtube {
     height: 48px;
     width: 48px;
 }
