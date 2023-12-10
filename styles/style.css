@@ -22,7 +22,7 @@ li.header__menu-items {
     padding-left: 0;
 }
 
-li.header__menu-items__first {
+li.header__link-active {
     list-style: none;
 }
 
@@ -309,15 +309,12 @@ a.footer__menu-items {
 .footer__socials {
     display: flex;
     justify-content: space-between;
+    gap: 48px;
+    
 }
 
-.footer__socials__image--first {
+.footer__socials__image {
     height: 48px;
     width: 48px;
 }
 
-.footer__socials__image--rest {
-    margin-left: 48px;
-    height: 48px;
-    width: 48px;
-}
